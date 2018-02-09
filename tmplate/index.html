@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN DEMO-index</title>
+</head>
+<body>
+    
+    <form method="POST" action="/login/">
+        {% csrf_token %}  
+        
+        <P>账号：</P><input type="text" name="uid"  value="userID">
+        <P>密码：</P><input type="password" name="password" value="">
+        <br><button type="submit">login</button>
+    </form>
+    <br>
+    <P>没有账号？？？ </P><a href="/sign-up/">点我注册</a>
+    <br><br>
+    <p>
+        {{login_result}}<br>
+        {{user_sex}}<br>
+        {{user_Email}}<br>
+        {{user_tel}}<br>
+        {{user_name}}<br> 
+    </p>
+
+</body>
+</html>
